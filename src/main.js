@@ -29,7 +29,7 @@ $(document).ready(function() {
       console.log(exNum);
       
       console.log(body);
-      $('#response').text(dollarAmount * (exRate)); 
+      $('#response').text( (dollarAmount * (exRate))); 
       
     }, function(error) {
       //write errors
