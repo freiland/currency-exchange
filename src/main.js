@@ -12,23 +12,31 @@ $(document).ready(function() {
     let dollarAmount = parseInt($('#usd').val());
     console.log(countryCode);
     console.log(dollarAmount);
-    //let searchTerm = $('#search-input').val();
-    //$('#search-input').val('');
-    //console.log(searchTerm);
+    
+    
+    
     let promise = currencyEx.getExRate();
     promise.then(function(response) {
       const body = JSON.parse(response);
-      //let exRate = `body.conversion_rates.${countryCode}`;
-      console.log(body.conversion_rates.AED * dollarAmount);
+      console.log(countryCode);
+      
+      let exRate = body.conversion_rates.countryCode;
+      
+      console.log(exRate);
+      
+      let exNum = parseInt(exRate);
+
+      console.log(exNum);
+      
       console.log(body);
-      //$('#result-image').attr('src',body.collection.items[0].links[0].href); 
+      $('#response').text(dollarAmount * parseInt(exRate.countryCode)); 
       //writeImages(body);
     }, function(error) {
       //write errors
       console.log(error);
     });
 
-    $('#response').append(dollarAmount * 2);
+    
 
   });
   
