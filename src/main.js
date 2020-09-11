@@ -20,7 +20,7 @@ $(document).ready(function() {
       const body = JSON.parse(response);
       console.log(countryCode);
       console.log(body);
-      let exRate = body.conversion_rates;
+      let exRate = body.conversion_rates[countryCode];
       
       console.log(exRate);
       
