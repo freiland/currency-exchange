@@ -17,7 +17,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'galactic-age',
       template: './src/index.html',
-      inject: 'head'
+      inject: 'body'
     })
   ],
   module: {
