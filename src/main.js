@@ -30,7 +30,7 @@ $(document).ready(function() {
       
       console.log(body);
       $('#response').text(dollarAmount * parseInt(exRate.countryCode)); 
-      //writeImages(body);
+      
     }, function(error) {
       //write errors
       console.log(error);
