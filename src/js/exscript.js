@@ -12,7 +12,6 @@ export default class currencyEx {
       };
       request.open('GET', url, true);
       request.send();
-
     });
   }
 }
