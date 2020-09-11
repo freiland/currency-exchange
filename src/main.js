@@ -29,10 +29,11 @@ $(document).ready(function() {
       console.log(exNum);
       
       console.log(body);
-      $('#response').text( (dollarAmount * (exRate))); 
+      $("#response2").text(`The value of ${dollarAmount} USD in ${countryCode} is:`);
+      $('#response').text(dollarAmount * (exRate)); 
       
     }, function(error) {
-      $('#error-response').text('Dang it :/ There was an error </3')
+      $('#error-response').text('Dang it :/ There was an error </3');
       console.log(error);
     });
 
