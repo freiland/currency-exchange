@@ -15,11 +15,12 @@ $(document).ready(function() {
     //let searchTerm = $('#search-input').val();
     //$('#search-input').val('');
     //console.log(searchTerm);
-    let promise = currencyEx.getExRate(countryCode);
+    let promise = currencyEx.getExRate();
     promise.then(function(response) {
       const body = JSON.parse(response);
-      alert(`body.conversion_rates.${countryCode}`);
-      //console.log(body);
+      //let exchangeRate = `body.conversion_rates.${countryCode}`;
+      console.log(body);
+      console.log(body);
       //$('#result-image').attr('src',body.collection.items[0].links[0].href); 
       //writeImages(body);
     }, function(error) {
