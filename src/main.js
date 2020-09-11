@@ -32,7 +32,7 @@ $(document).ready(function() {
       $('#response').text( (dollarAmount * (exRate))); 
       
     }, function(error) {
-      $('#response').text('Dang it :/ There was an error </3')
+      $('#error-response').text('Dang it :/ There was an error </3')
       console.log(error);
     });
 
