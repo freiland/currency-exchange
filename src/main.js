@@ -19,17 +19,17 @@ $(document).ready(function() {
     promise.then(function(response) {
       const body = JSON.parse(response);
       console.log(countryCode);
-      
-      let exRate = body.conversion_rates.countryCode;
+      console.log(body);
+      let exRate = body.conversion_rates;
       
       console.log(exRate);
       
-      let exNum = parseInt(exRate);
+      let exNum = exRate;
 
       console.log(exNum);
       
       console.log(body);
-      $('#response').text(dollarAmount * parseInt(exRate.countryCode)); 
+      $('#response').text(dollarAmount * (exRate)); 
       
     }, function(error) {
       //write errors
