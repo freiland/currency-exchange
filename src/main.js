@@ -1,14 +1,16 @@
-//import $ from 'jquery';
+import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-//import {keyInfo, raceExpect, mercuryExpect, venusExpect, marsExpect, jupiterExpect} from './js/blscripts.js';
+import currencyEx from './js/exscript.js';
 
 
 $(document).ready(function() {
   $('#question').submit(function () {
     event.preventDefault();
-    let countryCode = 
+    let countryCode = $("#country").val();
+
+    console.log(countryCode);
     
     //let searchTerm = $('#search-input').val();
     //$('#search-input').val('');
@@ -16,7 +18,7 @@ $(document).ready(function() {
     let promise = currencyEx.getExRate(countryCode);
     promise.then(function(response) {
       const body = JSON.parse(response);
-      alert(body.conversion_rates.EUR);
+      alert(`body.conversion_rates.${countryCode}`);
       //console.log(body);
       //$('#result-image').attr('src',body.collection.items[0].links[0].href); 
       //writeImages(body);
@@ -25,6 +27,7 @@ $(document).ready(function() {
       console.log(error);
     });
   });
+});
     
 //     if (planet === "earth" ) { 
 //       let yourAge = age;
@@ -86,4 +89,3 @@ $(document).ready(function() {
 //     }
     
 //   });
-// });
