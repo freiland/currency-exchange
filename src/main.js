@@ -23,12 +23,17 @@ $(document).ready(function() {
       let exRate = body.conversion_rates[countryCode];
       
       let exchangeRound = Math.round((dollarAmount*exRate*100)) / 100;
-      
-      $("#response2").text(`The value of $${dollarAmount} in ${countryCode} is:`);
-      $('#response').text(exchangeRound); 
+      if (isNaN(exchangeRound)) {
+        $("#response").text("please choose a valid currency!!!");
+        $("#response2").text(" ");
+      } 
+      else {
+        $("#response").text(`The value of $${dollarAmount} in ${countryCode} is:`);
+        $('#response2').text(exchangeRound); 
+      }
       
     }, function(error) {
-      $('#error-response').text(`There was an error processing the request: ${error}`);
+      $('#response').text(`There was an error processing the request: ${error}`);
       
     });
   }); 

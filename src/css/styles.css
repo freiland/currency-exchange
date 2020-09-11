@@ -3,13 +3,14 @@ body {
 }
 
 h3 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Segoe UI';
   font-size: xx-large;
   color: wheat;
 }
 
 .jumbotron {
-  background-color: rgb(15, 21, 130);
+  background-color: rgb(8, 13, 120);
+  
 }
 
 #response {
@@ -41,3 +42,4 @@ h3 {
 .form-control {
   padding: 5px;
 }
+

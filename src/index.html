@@ -6,8 +6,9 @@
 <body>
   
   <div class="container">
+    
   <form id="question">
-    <h3 class="jumbotron">OTHAFA Currency Exchange Calculator</h3>
+    <h3 class="jumbotron">OTHAFA Currency Exchange Calculator </h3>
 
     <label for="country">Choose your country code:</label>
       <select class="form-control" id="country">
@@ -17,6 +18,7 @@
         <option value="BGN"><strong>BGN</strong></option>
         <option value="BRL"><strong>BRL</strong></option>
         <option value="EUR"><strong>EUR</strong></option>
+        <option value="AAA"><strong>FAIL</strong></option>
       </select>
   
     <label for="usdAmount">Enter your the dollar amount to convert:</label>
@@ -27,8 +29,11 @@
     
       <button type="submit" class="btn btn-primary"><em>CALCULATE!</em></button>
   </form>
+  
+  <ul id="response">
+
+  </ul>
   <ul id="response2"></ul>
-  <ul id="response"></ul>
   <ul id="error-response"></ul>
   </div>
   
