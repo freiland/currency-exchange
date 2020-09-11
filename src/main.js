@@ -5,17 +5,28 @@ import './css/styles.css';
 //import {keyInfo, raceExpect, mercuryExpect, venusExpect, marsExpect, jupiterExpect} from './js/blscripts.js';
 
 
-// $(document).ready(function() {
-//   $('#question').submit(function(event) {
-//     event.preventDefault();
-//     let age = parseInt($('#age').val());
-//     let planet = $('#planet').val();
-//     let race = $('#race').val();
+$(document).ready(function() {
+  $('#search-button').click(function () {
+    $('#image-search-results').show();
+    $('#random-date-results').hide();
+    $('#earthPic').hide();
+    $('#asteroid').hide();
     
-//     console.log(race);
-//     console.log(raceExpect[race]);
-    
-//     const userData = new keyInfo (age, race);
+    //let searchTerm = $('#search-input').val();
+    //$('#search-input').val('');
+    //console.log(searchTerm);
+    let promise = currencyEx.getExRate(countryCode);
+    promise.then(function(response) {
+      const body = JSON.parse(response);
+      alert(body.conversion_rates.EUR);
+      //console.log(body);
+      //$('#result-image').attr('src',body.collection.items[0].links[0].href); 
+      //writeImages(body);
+    }, function(error) {
+      //write errors
+      console.log(error);
+    });
+  });
     
 //     if (planet === "earth" ) { 
 //       let yourAge = age;
