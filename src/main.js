@@ -29,77 +29,14 @@ $(document).ready(function() {
       console.log(exNum);
       
       console.log(body);
-      $("#response2").text(`The value of ${dollarAmount} USD in ${countryCode} is:`);
-      $('#response').text(dollarAmount * (exRate)); 
+      let exchangeRound = Math.round((dollarAmount*exRate*100)) / 100;
+      $("#response2").text(`The value of $${dollarAmount} in ${countryCode} is:`);
+      $('#response').text(exchangeRound); 
       
     }, function(error) {
       $('#error-response').text('Dang it :/ There was an error </3');
       console.log(error);
     });
-
-    
-
-  });
-  
+  }); 
 });
-    
-//     if (planet === "earth" ) { 
-//       let yourAge = age;
-//       let timeLeft = userData.timeOnEarth();
-//       if ( yourAge > raceExpect[userData.race]) {
-//         $('#response').text(`You are ${yourAge} on Earth. You have exceeded the average lifespan by ${timeLeft} years!`);
-//       }
-//       else {
-//         $('#response').text(`You are ${yourAge} on Earth. You have ${timeLeft} years left to live on Earth!`);
-//       }
-      
-//     }
-//     else if (planet === "mercury") {
-//       let yourAge = userData.mercuryYear();
-//       let timeLeft = userData.timeOnMercury();
-//       if ( yourAge > mercuryExpect[userData.race]) {
-//         $('#response').text(`You are ${yourAge} on Mercury. You have exceeded the average lifespan by ${timeLeft} years!`);
-//       }
-//       else {
-//         $('#response').text(`You are ${yourAge} on Mercury. You have ${timeLeft} years left to live on Mercury!`);
-//       }
-
-//     }
-
-//     else if (planet === "venus") {
-//       let yourAge = userData.venusYear();
-//       let timeLeft = userData.timeOnVenus();
-//       if ( yourAge > venusExpect[userData.race]) {
-//         $('#response').text(`You are ${yourAge} on Venus. You have exceeded the average lifespan by ${timeLeft} years!`);
-//       }
-//       else {
-//         $('#response').text(`You are ${yourAge} on Venus. You have ${timeLeft} years left to live on Venus!`);
-//       }
-
-//     }
-
-//     else if (planet === "mars") {
-//       let yourAge = userData.marsYear();
-//       let timeLeft = userData.timeOnMars();
-//       if ( yourAge > marsExpect[userData.race]) {
-//         $('#response').text(`You are ${yourAge} on Mars. You have exceeded the average lifespan by ${timeLeft} years!`);
-//       }
-//       else {
-//         $('#response').text(`You are ${yourAge} on Mars. You have ${timeLeft} years left to live on Mars!`);
-//       }
-
-//     }
-
-//     else if (planet === "jupiter") {
-//       let yourAge = userData.jupiterYear();
-//       let timeLeft = userData.timeOnJupiter();
-//       if ( yourAge > jupiterExpect[userData.race]) {
-//         $('#response').text(`You are ${yourAge} on Jupiter. You have exceeded the average lifespan by ${timeLeft} years!`);
-//       }
-//       else {
-//         $('#response').text(`You are ${yourAge} on Jupiter. You have ${timeLeft} years left to live on Jupiter!`);
-//       }
-
-//     }
-    
-//   });
+  

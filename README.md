@@ -1,22 +1,24 @@
-# _Galactic Age Calculator_
+# _Currency Exchange Calculator_
 
-#### _Exercise in building development environments with npm and test driven development, September 4, 2020_
+#### _Exercise in making API calls and using the JavaScript promise, September 11, 2020_
 
 #### By _Forrest Reiland_
 
 ## Description 
 
-_This application allows a user to input their age (in years) and their race. It then calculates their age in solar orbits on Mercury, Venus, Mars, and Jupiter. Additionally it calculates a users life expectatncy on each planet and how many years on that planet they have to live. Finally, if a users input age is greater than the life expectancy for their demographic, it returns the number of years that they have gone over the average life expectancy for their demographic._
+_This application allows a user to input an integer dollar amount for real time currency conversion. A drop down menu allows them to choose from six international currencies to convert their input dollar amount to. The application makes an API call to Exchange Rate API to access live currency conversion rates. The conversion is returned to the user on the index page._
+
+_To generate your unique API key visit https://app.exchangerate-api.com/. Fill out the required information to generate your API key. Your API key should be stored within the main file directory in a file named ".env". A webpack plugin, dotenv is required to inject the api variable into the directory scripts. The API should be stored in the variable "API_KEY". Furthermore, the .env file should not be made public or shared to Github._
 
 ## Specifications
 
-* #### **Spec**:  The program takes in the users age, and race and returns a keyInfo object.
-  * #### **Input**: 25 and hispanic.
-  * #### **Output**: userInfo (age:25, race: hispanic)
+* #### **Spec**:  The program takes in the a dollar amount and returns an integer of the input value
+  * #### **Input**: "7"
+  * #### **Output**: 7
 
-* #### **Spec**:  The program calculates age in Mercury years.
-  * #### **Input**: 25 years
-  * #### **Output**: 104.17 years
+* #### **Spec**:  The program takes in a currency code from a drop down menu.
+  * #### **Input**: EUR
+  * #### **Output**: EUR
 
 * #### **Spec**:  The program calculates age in Venus years.
   * #### **Input**: 25 years
