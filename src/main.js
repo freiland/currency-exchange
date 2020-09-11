@@ -10,8 +10,7 @@ $(document).ready(function() {
     event.preventDefault();
     let countryCode = $("#country").val();
     let dollarAmount = parseInt($('#usd').val());
-    console.log(countryCode);
-    console.log(dollarAmount);
+    
     
     
     
