@@ -6,11 +6,9 @@ import './css/styles.css';
 
 
 $(document).ready(function() {
-  $('#search-button').click(function () {
-    $('#image-search-results').show();
-    $('#random-date-results').hide();
-    $('#earthPic').hide();
-    $('#asteroid').hide();
+  $('#question').submit(function () {
+    event.preventDefault();
+    let countryCode = 
     
     //let searchTerm = $('#search-input').val();
     //$('#search-input').val('');
