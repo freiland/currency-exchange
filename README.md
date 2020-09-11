@@ -13,42 +13,28 @@ _To generate your unique API key visit https://app.exchangerate-api.com/. Fill o
 ## Specifications
 
 * #### **Spec**:  The program takes in the a dollar amount and returns an integer of the input value
-  * #### **Input**: "7"
-  * #### **Output**: 7
+  * #### **Input**: "10"
+  * #### **Output**: 10
 
 * #### **Spec**:  The program takes in a currency code from a drop down menu.
   * #### **Input**: EUR
   * #### **Output**: EUR
 
-* #### **Spec**:  The program calculates age in Venus years.
-  * #### **Input**: 25 years
-  * #### **Output**: 40.32 years
+* #### **Spec**:  The program multiplies dollar value by the exchange rate for currency code.
+  * #### **Input**: 10, EUR:0.84
+  * #### **Output**:  8.4
 
-* #### **Spec**:  The program calculates age in Mars years.
-  * #### **Input**: 25 years
-  * #### **Output**: 13.29 years
 
-* #### **Spec**:  The program calculates age in Jupiter years.
-  * #### **Input**: 25 years
-  * #### **Output**: 2.11 years
+## Setup/Installation Requirements
 
-* #### **Spec**:  The program calculates life expectancy in Earth years based on demographic data compiled by the CDC.
-  * #### **Input**: 'hispanic'
-  * #### **Output**: 82 years
+* _clone this repository_
+* _navigate to the root dir of this project_
+* _in terminal do command npm install_
+* _generate an api key at https://app.exchangerate-api.com/_
+* _create a .env file in the root dir_
+* _in .env file add API_KEY=[your api key]_
+* _in terminal do command npm run start_
 
-* #### **Spec**:  A method calculates how many years a user has left to live based on life expectancy.
-  * #### **Input**: 25, 'hispanic'
-  * #### **Output**: 57 years.
-
-* #### **Spec**:  A function returns the years that a user has exceeded their life expectancy.
-  * #### **Input**: 89, 'hispanic'
-  * #### **Output**: 7.
-
-## Setup / Installation Instructions
-
-* _Clone this repository_
-* _Open the file directory_
-* _Drag the index.html file into the browswer of your choice._
 
 ## Known Bugs
 
@@ -65,8 +51,8 @@ _If you encounter any problems with this software, or would like to contribute, 
 * JavaScript and JQuery
 * Markdown 
 * node package manager
-* Jest
 * Babel 
+* CurrencyExchange API
 
 ## License 
 
