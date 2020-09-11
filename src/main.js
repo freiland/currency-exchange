@@ -9,17 +9,17 @@ $(document).ready(function() {
   $('#question').submit(function () {
     event.preventDefault();
     let countryCode = $("#country").val();
-
+    let dollarAmount = parseInt($('#usd').val());
     console.log(countryCode);
-    
+    console.log(dollarAmount);
     //let searchTerm = $('#search-input').val();
     //$('#search-input').val('');
     //console.log(searchTerm);
     let promise = currencyEx.getExRate();
     promise.then(function(response) {
       const body = JSON.parse(response);
-      //let exchangeRate = `body.conversion_rates.${countryCode}`;
-      console.log(body);
+      //let exRate = `body.conversion_rates.${countryCode}`;
+      console.log(body.conversion_rates.AED * dollarAmount);
       console.log(body);
       //$('#result-image').attr('src',body.collection.items[0].links[0].href); 
       //writeImages(body);
@@ -27,7 +27,11 @@ $(document).ready(function() {
       //write errors
       console.log(error);
     });
+
+    $('#response').append(dollarAmount * 2);
+
   });
+  
 });
     
 //     if (planet === "earth" ) { 
