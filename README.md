@@ -8,7 +8,7 @@
 
 _This application allows a user to input an integer dollar amount for real time currency conversion. A drop down menu allows them to choose from six international currencies to convert their input dollar amount to. The application makes an API call to Exchange Rate API to access live currency conversion rates. The conversion is returned to the user on the index page._
 
-_To generate your unique API key visit https://app.exchangerate-api.com/. Fill out the required information to generate your API key. Your API key should be stored within the main file directory in a file named ".env". A webpack plugin, dotenv is required to inject the api variable into the directory scripts. The API should be stored in the variable "API_KEY". Furthermore, the .env file should not be made public or shared to Github._
+_To generate your unique API key visit https://app.exchangerate-api.com/sign-up. Fill out the required information to generate your API key. Your API key should be stored within the main file directory in a file named ".env". A webpack plugin, dotenv is required to inject the api variable into the directory scripts. The API should be stored in the variable "API_KEY". Furthermore, the .env file should not be made public or shared to Github._
 
 ## Specifications
 
